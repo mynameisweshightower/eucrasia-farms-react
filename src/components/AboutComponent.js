@@ -108,7 +108,7 @@ function About(props) {
 					</div>
 				</Container>
 			</Jumbotron>
-			<div class="container">
+			<div className="container">
 				<div className='row row-content'>
 					<div className='col-sm-6'>
 						<h3>Our Mission</h3>

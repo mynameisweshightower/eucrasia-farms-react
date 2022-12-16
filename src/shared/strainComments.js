@@ -2,7 +2,7 @@ export const STRAIN_COMMENTS =
 [
     {
         id: 0,
-        productId: 0,
+        strainId: 0,
         rating: 5, 
         text: "Past, present, future, all are one in React Lake Campground.",
         author: "Abdul Alhazred",
@@ -10,7 +10,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 1,
-        productId: 0,
+        strainId: 0,
         rating: 4, 
         text: "The campground was beautiful, but the bugs could bite sometimes.",
         author: "Brennen Ech",
@@ -18,7 +18,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 2,
-        productId: 0,
+        strainId: 0,
         rating: 5, 
         text: "I caught a world-record-breaking trout here on my last visit.",
         author: "McKenzie Sebastian",
@@ -26,7 +26,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 3,
-        productId: 0,
+        strainId: 0,
         rating: 5, 
         text: "A wonderful place to reconnect with nature.",
         author: "Jordan Runn",
@@ -34,7 +34,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 4,
-        productId: 0,
+        strainId: 0,
         rating: 4, 
         text: "The stars at night were a revelation!",
         author: "Ann Dabramov",
@@ -42,7 +42,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 5,
-        productId: 1,
+        strainId: 1,
         rating: 4, 
         text: "The campground was beautiful, but the bugs could bite sometimes.",
         author: "Brennen Ech",
@@ -50,7 +50,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 6,
-        productId: 1,
+        strainId: 1,
         rating: 5, 
         text: "I caught a world-record-breaking trout here on my last visit.",
         author: "McKenzie Sebastian",
@@ -58,7 +58,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 7,
-        productId: 1,
+        strainId: 1,
         rating: 5, 
         text: "A wonderful place to reconnect with nature.",
         author: "Jordan Runn",
@@ -66,7 +66,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 8,
-        productId: 1,
+        strainId: 1,
         rating: 4, 
         text: "The stars at night were a revelation!",
         author: "Ann Dabramov",
@@ -74,7 +74,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 9,
-        productId: 1,
+        strainId: 1,
         rating: 5, 
         text: "What a magnificent view!",
         author: "Tinus Lorvaldes",
@@ -82,7 +82,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 10,
-        productId: 2,
+        strainId: 2,
         rating: 5, 
         text: "I caught a world-record-breaking trout here on my last visit.",
         author: "McKenzie Sebastian",
@@ -90,7 +90,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 11,
-        productId: 2,
+        strainId: 2,
         rating: 5, 
         text: "A wonderful place to reconnect with nature.",
         author: "Jordan Runn",
@@ -98,7 +98,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 12,
-        productId: 2,
+        strainId: 2,
         rating: 4, 
         text: "The stars at night were a revelation!",
         author: "Ann Dabramov",
@@ -106,7 +106,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 13,
-        productId: 2,
+        strainId: 2,
         rating: 5, 
         text: "What a magnificent view!",
         author: "Tinus Lorvaldes",
@@ -114,7 +114,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 14,
-        productId: 2,
+        strainId: 2,
         rating: 4, 
         text: "The campground was beautiful, but the bugs could bite sometimes.",
         author: "Brennen Ech",
@@ -122,7 +122,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 15,
-        productId: 3,
+        strainId: 3,
         rating: 5, 
         text: "That is the fairest of all the dwellings of my people. There are no trees like the trees of Redux Woods. For in the autumn their leaves fall not, but turn to gold. Not till the spring and the new green opens do they fall, and then the boughs are laden with yellow flowers; and the floor of the wood is golden, and golden is the roof, and its pillars are of silver, for the bark of the trees is smooth and grey.",
         author: "Legolas, son of Thranduil",
@@ -130,7 +130,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 16,
-        productId: 3,
+        strainId: 3,
         rating: 4, 
         text: "The stars at night were a revelation!",
         author: "Ann Dabramov",
@@ -138,7 +138,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 17,
-        productId: 3,
+        strainId: 3,
         rating: 5, 
         text: "What a magnificent view!",
         author: "Tinus Lorvaldes",
@@ -146,7 +146,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 18,
-        productId: 3,
+        strainId: 3,
         rating: 4, 
         text: "The campground was beautiful, but the bugs could bite sometimes.",
         author: "Brennen Ech",
@@ -154,7 +154,7 @@ export const STRAIN_COMMENTS =
     },
     {
         id: 19,
-        productId: 3,
+        strainId: 3,
         rating: 5, 
         text: "I caught a world-record-breaking trout here on my last visit.",
         author: "McKenzie Sebastian",

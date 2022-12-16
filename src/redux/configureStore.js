@@ -3,9 +3,9 @@ import { createForms } from "react-redux-form";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import { Products } from "./products";
+import { Comments } from "./comments";
 import { Strains } from "./strains";
 import { StrainComments } from "./strainComments";
-import { Comments } from "./comments";
 import { Partners } from "./partners";
 import { Promotions } from "./promotions";
 import { InitialFeedback } from "./forms";
@@ -15,9 +15,9 @@ export const ConfigureStore = () => {
 	const store = createStore(
 		combineReducers({
 			products: Products,
+			comments: Comments,
 			strains: Strains,
 			strainComments: StrainComments,
-			comments: Comments,
 			partners: Partners,
 			promotions: Promotions,
 			feedback: Feedback,

@@ -169,10 +169,7 @@ function RenderStrainComments({ strainComments, postStrainComment, strainId }) {
 									);
 								})}
 							</Stagger>
-							<StrainCommentForm
-								strainId={strainId}
-								postStrainComment={postStrainComment}
-							/>
+							<StrainCommentForm strainId={strainId} postStrainComment={postStrainComment} />
 						</div>
 					</div>
 				</div>
