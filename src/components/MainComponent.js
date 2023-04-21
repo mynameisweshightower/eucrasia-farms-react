@@ -17,9 +17,9 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const mapStateToProps = state => {
   return {
     products: state.products,
+    comments: state.comments,
     strains: state.strains,
     strainComments: state.strainComments,
-    comments: state.comments,
     promotions: state.promotions,
     partners: state.partners
   };
@@ -27,12 +27,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   postComment: (productId, rating, author, text) => (postComment(productId, rating, author, text)),
-  fetchProducts: () => (fetchProducts()),
-  fetchStrains: () => (fetchStrains()),
-  fetchStrainComments: () => (fetchStrainComments()),
-  postStrainComment: () => (strainId, rating, author, text) => (postStrainComment(strainId, rating, author, text)),
-  resetFeedbackForm: () => (actions.reset('feedbackForm')),
   fetchComments: () => (fetchComments()),
+  fetchProducts: () => (fetchProducts()),
+  postStrainComment: () => (strainId, rating, author, text) => (postStrainComment(strainId, rating, author, text)),
+  fetchStrainComments: () => (fetchStrainComments()),
+  fetchStrains: () => (fetchStrains()),
+  resetFeedbackForm: () => (actions.reset('feedbackForm')),
   fetchPromotions: () => (fetchPromotions()),
   fetchPartners: () => (fetchPartners()),
   postFeedback: (firstName, lastName, phoneNum, email, agree, contactType, feedback) => (postFeedback(firstName, lastName, phoneNum, email, agree, contactType, feedback))
@@ -42,9 +42,9 @@ class Main extends Component {
 
   componentDidMount() {
     this.props.fetchProducts();
+    this.props.fetchComments();
     this.props.fetchStrains();
     this.props.fetchStrainComments();
-    this.props.fetchComments();
     this.props.fetchPromotions();
     this.props.fetchPartners();
   }
@@ -67,6 +67,19 @@ class Main extends Component {
       );
     };
 
+    const StrainWithId = ({match}) => {
+      return (
+        <StrainInfo
+          strain={this.props.strains.strains.filter(strain => strain.id === +match.params.strainId)[0]}
+          isLoading={this.props.strains.isLoading}
+          errMess={this.props.strains.errMess}
+          strainComments={this.props.strainComments.strainComments.filter(strainComment => strainComment.strainId === +match.params.strainId)}
+          commentErrMess={this.props.comments.errMess}
+          postStrainComment={this.props.postStrainComment}
+        />
+      )
+    }
+
     const ProductWithId = ({match}) => {
       return (
         <ProductInfo
@@ -80,18 +93,7 @@ class Main extends Component {
       )
     }
 
-    const StrainWithId = ({match}) => {
-      return (
-        <StrainInfo
-          strain={this.props.strains.strains.filter(strain => strain.id === +match.params.strainId)[0]}
-          isLoading={this.props.strains.isLoading}
-          errMess={this.props.strains.errMess}
-          strainComments={this.props.strainComments.strainComments.filter(strainComment => strainComment.strainId === +match.params.strainId)}
-          commentErrMess={this.props.comments.errMess}
-          postStrainComment={this.props.postStrainComment}
-        />
-      )
-    }
+    
 
     return (
       <div>

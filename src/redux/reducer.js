@@ -6,10 +6,10 @@ import { PARTNERS } from '../shared/partners';
 import { PROMOTIONS } from '../shared/promotions';
 
 export const initialState = {
-    products: PRODUCTS,
-    comments: COMMENTS,
     strains: STRAINS,
     strainComments: STRAIN_COMMENTS,
+    products: PRODUCTS,
+    comments: COMMENTS,
     partners: PARTNERS,
     promotions: PROMOTIONS
 };

@@ -169,7 +169,7 @@ function RenderStrainComments({ strainComments, postStrainComment, strainId }) {
 									);
 								})}
 							</Stagger>
-							<StrainCommentForm strainId={strainId} postStrainComment={postStrainComment} />
+							{/* <StrainCommentForm strainId={strainId} postStrainComment={postStrainComment} /> */}
 						</div>
 					</div>
 				</div>
@@ -180,7 +180,7 @@ function RenderStrainComments({ strainComments, postStrainComment, strainId }) {
 	return <div />;
 }
 
-class StrainCommentForm extends Component {
+/* class StrainCommentForm extends Component {
 	constructor(props) {
 		super(props);
 
@@ -192,7 +192,7 @@ class StrainCommentForm extends Component {
 		};
 
 		this.toggleModal = this.toggleModal.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleStrainSubmit = this.handleStrainSubmit.bind(this);
 	}
 
 	toggleModal() {
@@ -201,14 +201,17 @@ class StrainCommentForm extends Component {
 		});
 	}
 
-	handleSubmit(values) {
+	handleStrainSubmit(strainValues) {
+		console.log('before modal closes');
 		this.toggleModal();
+		console.log('modal is closed');
 		this.props.postStrainComment(
 			this.props.strainId,
-			values.rating,
-			values.author,
-			values.text
+			strainValues.rating,
+			strainValues.author,
+			strainValues.text
 		);
+		console.log('after postStrainComment');
 	}
 
 	render() {
@@ -231,7 +234,7 @@ class StrainCommentForm extends Component {
 					</ModalHeader>
 					<ModalBody>
 						<LocalForm
-							onSubmit={(values) => this.handleSubmit(values)}
+							onSubmit={(strainValues) => this.handleStrainSubmit(strainValues)}
 						>
 							<div className="form-group">
 								<Label htmlFor="rating">Rating</Label>
@@ -298,7 +301,7 @@ class StrainCommentForm extends Component {
 			</div>
 		);
 	}
-}
+} */
 
 function StrainInfo(props) {
 	if (props.isLoading) {
@@ -357,7 +360,7 @@ function StrainInfo(props) {
 					<RenderStrain strain={props.strain} />
 					<RenderStrainComments
 						strainComments={props.strainComments}
-						postStrainComment={props.postStrainComment}
+						//postStrainComment={props.postStrainComment}
 						strainId={props.strain.id}
 					/>
 				</div>

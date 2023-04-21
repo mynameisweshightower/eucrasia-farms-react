@@ -44,7 +44,7 @@ class Contact extends Component {
 
 	handleSubmit(values) {
 		// console.log("Current state is: " + JSON.stringify(values));
-		// alert("Current state is: " + JSON.stringify(values));
+		alert("Thank you for contacting us!\n\n" + JSON.stringify(values, "", 1) + "\n\nWe will contact you soon!");
 	}
 
 	render() {
@@ -81,24 +81,24 @@ class Contact extends Component {
 					<div className="col-sm-4">
 						<h5>Our Address</h5>
 						<address>
-							1 Nucamp Way
+							XX Road 20
 							<br />
-							Seattle, WA 98001
+							Nowata, OK 74048
 							<br />
 							U.S.A.
 						</address>
 					</div>
 					<div className="col">
-						<a role="button" className="btn btn-link" href="tel:+12065551234">
-							<i className="fa fa-phone" /> 1-206-555-1234
+						<a role="button" className="btn btn-link" href="tel:+19185555446">
+							<i className="fa fa-phone" /> 1-918-555-5446
 						</a>
 						<br />
 						<a
 							role="button"
 							className="btn btn-link"
-							href="mailto:fakeemail@fakeemail.co"
+							href="mailto:wesley.l.hightower@gmail.com"
 						>
-							<i className="fa fa-envelope-o" /> products@nucamp.co
+							<i className="fa fa-envelope-o" /> info@eucrasiafarms.com
 						</a>
 					</div>
 				</div>
@@ -109,7 +109,7 @@ class Contact extends Component {
 						<hr />
 					</div>
 					<div className="col-md-10">
-						<LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+						<LocalForm onSubmit={(values) => this.handleSubmit(values)} className="contact-form">
 							<Row className="form-group">
 								<Label htmlFor="firstName" md={2}>
 									First Name

@@ -127,6 +127,7 @@ export const addComment = (comment) => ({
 });
 
 export const postComment = (productId, rating, author, text) => (dispatch) => {
+	console.log('inside postComment');
 	const newComment = {
 		productId: productId,
 		rating: rating,
@@ -207,12 +208,13 @@ export const addStrainComment = (strainComment) => ({
 	payload: strainComment
 });
 
-export const postStrainComment = (strainId, rating, author, text) => (dispatch) => {
+export const postStrainComment = (strainId, strainRating, strainAuthor, strainText) => (dispatch) => {
+	console.log('inside postStrainComment');
 	const newStrainComment = {
 		strainId: strainId,
-		rating: rating,
-		author: author,
-		text: text
+		rating: strainRating,
+		author: strainAuthor,
+		text: strainText
 	};
 	newStrainComment.date = new Date().toISOString();
 
